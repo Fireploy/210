@@ -15,7 +15,7 @@ const HomePage = () => {
   const [alumnoEditar, setAlumnoEditar] = useState(null); // Para almacenar la data del alumno que se va a editar
   const [showRegistroForm, setShowRegistroForm] = useState(true); //Para mostrar el formulario de acuerdo a la variable (true o false) formulario para registrar o editar
 
-  const URL_API = process.env.FIREPLOY_BACKEND;
+  const URL_API = process.env.URL_BACKEND;
 
   useEffect(() => {
     // Obtener lista de alumnos al cargar la página
