@@ -15,7 +15,7 @@ const HomePage = () => {
   const [alumnoEditar, setAlumnoEditar] = useState(null); // Para almacenar la data del alumno que se va a editar
   const [showRegistroForm, setShowRegistroForm] = useState(true); //Para mostrar el formulario de acuerdo a la variable (true o false) formulario para registrar o editar
 
-  const URL_API = process.env.VITE_URL_BACKEND;
+  const URL_API = `${import.meta.env.VITE_URL_BACKEND}/alumnos`;
 
   useEffect(() => {
     // Obtener lista de alumnos al cargar la página
@@ -25,6 +25,8 @@ const HomePage = () => {
   const obtenerAlumnos = async () => {
     try {
       const response = await axios.get(URL_API);
+      console.log(URL_API)
+      console.log(response.data)
       setAlumnos(response.data);
     } catch (error) {
       console.error("Error al obtener alumnos:", error);
