@@ -6,17 +6,17 @@ export default ({ mode }) => {
 
   return defineConfig({
     plugins: [react()],
-    // server: {
-    //   port: parseInt(env.VITE_PORT),
-    //   host: true,
-    //   cors: true,
-    //   allowedHosts: [env.VITE_FIREPLOY_HOST],
-    // },
-    // preview: {
-    //   port: parseInt(env.VITE_PORT),
-    //   host: true,
-    //   cors: true,
-    //   allowedHosts: [env.VITE_FIREPLOY_HOST],
-    // },
+    server: {
+      port: parseInt(env.VITE_PORT),
+      host: true,
+      cors: true,
+      allowedHosts: [env.VITE_FIREPLOY_HOST],
+    },
+    preview: {
+      port: parseInt(env.VITE_PORT),
+      host: true,
+      cors: true,
+      allowedHosts: [env.VITE_FIREPLOY_HOST],
+    },
   });
 };
